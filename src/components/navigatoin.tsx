@@ -66,9 +66,9 @@ export default function NavBar(){
     <SearchBar />
     <div className="block md:flex text-sm w-[50%] justify-between ml-20">
     <div className='relative' onMouseEnter={()=>{wOnHover(true)}} onMouseLeave={()=>{wOnHover(false)}}>
-        <a  className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697] cursor-pointer">
+        <Link href="works"  className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697] cursor-pointer">
           What We Do
-        </a>
+        </Link>
         <ul className={wDropdown}>
           <Link href="works#demo"><li className='border-b p-4 cursor-pointer hover:bg-gray-100'>Democratic Enlightenment</li></Link>
           <Link href="works#rule"><li className='border-b p-4 cursor-pointer hover:bg-gray-100'>Promoting Rule of Law</li></Link>
