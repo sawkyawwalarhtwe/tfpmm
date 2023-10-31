@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import { Pagination } from 'swiper/modules';
-import { Button, CardActions, CardContent, Paper, Typography } from '@mui/material';
+import { Paper} from '@mui/material';
 import SwiperCore from "swiper";
 
 SwiperCore.use([Pagination]);
@@ -63,23 +63,23 @@ function Item(props: { item:any})
     return (
        
         <div className=''>
-             <Paper style={{backgroundImage:`url(${props.item.img})`}} className='h-[370px] text-white bg-cover bg-no-repeat bg-center font-sans pt-[10%]'>
+             <div style={{backgroundImage:`url(${props.item.img})`}} className='h-[370px]  text-white bg-cover bg-no-repeat bg-center font-sans pt-[10%]'>
            
            
-           </Paper>
-           <div className="flex justify-evenly">
+           </div>
+           <div className="flex justify-evenly pl-4">
                 <div className='bg-white   md:px-[8%] pt-[50px] transition duration-300'>
-                    <CardContent>
-                    <Typography sx={{ fontSize: 14 }} gutterBottom className='text-black text-xl md:text-3xl font-bold'>
+                    <div>
+                    <h1  className='text-black text-xl md:text-3xl font-bold mb-4'>
                         {props.item.name}
-                    </Typography>
-                    <Typography sx={{ mb: 1.5 }} className='text-gray-700 text-base '>
+                    </h1>
+                    <h1  className='text-gray-700 text-base mb-4'>
                         {props.item.description}
-                    </Typography>
-                    </CardContent>
-                    <CardActions >
-                        <Button size="small" className='md:w-[200px] md:h-[50px] text-xs md:text-base p-2 bg-blue-500 text-white'>Learn More</Button>
-                    </CardActions>
+                    </h1>
+                    </div>
+                    <div >
+                        <button  className='rounded-md md:w-[200px] md:h-[50px] text-xs md:text-base p-2 bg-blue-500 text-white'>Learn More</button>
+                    </div>
                 </div>
                 <div className='md:text-base text-xs font-sans font-bold md:pt-[5%] h-[200px]  md:h-[250px] w-[60%] md:w-[40%] mx-[4%] p-4 md:px-[4%] mt-[-100px] border shadow-md bg-slate-100 opacity-70 rounded-lg'>
                     <p>

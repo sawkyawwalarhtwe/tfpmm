@@ -1,4 +1,3 @@
-'use client'
 import NewsCard from '../../components/newscard';
 import {isMobile} from 'react-device-detect';
 import React from 'react';

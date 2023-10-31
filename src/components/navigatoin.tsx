@@ -3,12 +3,16 @@ import Image from 'next/image'
 import SearchBar from './searchbar'
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 export default function NavBar(){
   const [abDropdown, setabDropdown] = useState("invisible absolute bg-white w-[250px] font-sans text-gray-600	z-20")
   const [wDropdown, setwDropdown] = useState("invisible absolute bg-white w-[250px] font-sans text-gray-600	z-20")
   const [pbDropdown, setpbDropdown] = useState("invisible absolute bg-white w-[250px] font-sans text-gray-600	z-20")
   const [mNav,setmNav] = useState("w-full flex-grow lg:flex lg:items-center lg:w-auto justify-end hidden")
   const [click,setClick] = useState(false)
+  const pathname = usePathname()
+
 
   function mNavOnclick(){
     if(!click){
@@ -65,8 +69,13 @@ export default function NavBar(){
   <div className={mNav}>
     <SearchBar />
     <div className="block md:flex text-sm w-[50%] justify-between ml-20">
+    <Link href="/" className={pathname == '/'?"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#D19697]":"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]"}>
+        Home
+      </Link>
+
     <div className='relative' onMouseEnter={()=>{wOnHover(true)}} onMouseLeave={()=>{wOnHover(false)}}>
-        <Link href="works"  className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697] cursor-pointer">
+    
+        <Link href="works"  className={pathname == '/works'?"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#D19697]":"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]"}>
           What We Do
         </Link>
         <ul className={wDropdown}>
@@ -76,9 +85,9 @@ export default function NavBar(){
       </div>
 
       <div className='relative' onMouseEnter={()=>{abOnHover(true)}} onMouseLeave={()=>{abOnHover(false)}}>
-      <a className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] cursor-pointer">
+      <Link href="/about" className={pathname == '/about'?"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#D19697]":"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]"}>
         About Us
-      </a>
+      </Link>
       <ul className={abDropdown}>
           <Link href="about"><li className='border-b p-4 cursor-pointer hover:bg-gray-100'>Who we are</li></Link>
           <Link href="about#vision"><li className='border-b p-4 cursor-pointer hover:bg-gray-100'>Vision, Mission and Values</li></Link>
@@ -89,7 +98,7 @@ export default function NavBar(){
       </div>
       
       <div className='relative'  onMouseEnter={()=>{pbOnHover(true)}} onMouseLeave={()=>{pbOnHover(false)}}>
-      <Link href="publication" className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]">
+      <Link href="publication" className={pathname == '/publication'?"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#D19697]":"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]"}>
           Publication
         </Link>
         <ul className={pbDropdown}>
@@ -130,12 +139,12 @@ export default function NavBar(){
         </ul>
       </div>
       
-      <Link href="news" className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]">
+      <Link href="news" className={pathname == '/news'?"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#D19697]":"text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]"}>
         News
       </Link>
-      <a href="#responsive-header" className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]">
+      {/* <a href="#responsive-header" className="text-lg block font-[550] mt-4 lg:inline-block lg:mt-0 text-[#3f3e3e] hover:text-[#D19697]">
         TFP Community
-      </a>
+      </a> */}
       
     </div>
     

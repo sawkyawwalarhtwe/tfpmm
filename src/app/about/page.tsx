@@ -105,7 +105,7 @@ export default function WWA(){
                     ref={part} 
                     style={{
                     opacity: isPartView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
                     }}
                     />
                     <img src="ndi.png" className="w-[15%]" alt=""
@@ -158,7 +158,7 @@ export default function WWA(){
                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, 
                 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <Button variant="contained" className=' bg-blue-700 mx-[35%] lg:mx-[47%] w-[100px]'>Mail Us</Button>
+                <button className=' rounded-lg shadow-md bg-blue-700 mx-[35%] lg:mx-[47%] w-[100px]'>Mail Us</button>
             </div>
         </div>
         <Footer/>

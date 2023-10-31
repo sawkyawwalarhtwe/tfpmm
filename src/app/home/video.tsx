@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -16,7 +15,7 @@ export default function MVideos(){
                 <p className="text-center mt-2 mb-14">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
-                <Button className='bg-blue-700 text-white mx-20% w-]200px] mx-[38%]'>Browse More</Button>
+                <button className='bg-blue-700 text-white mx-20% w-[150px] mx-[38%] h-[50px] rounded-lg shadow-md'>Browse More</button>
             </div>
             <div className='ml-24'>
                 <Card sx={{ display: 'flex' }} className='mb-6'>

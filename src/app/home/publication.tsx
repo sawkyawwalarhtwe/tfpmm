@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 
 export default function MPublication(){
     return(
@@ -20,7 +19,7 @@ export default function MPublication(){
                 <img width={500} src="book-2.jpg" alt="..."/>
             </div>
 
-            <Button variant="contained"  className=' bg-[#8e72fd] w-[200px] h-[50px] md:mx-[45%] mx-[20%]'>More Publication</Button>       
+            <button  className='text-white rounded-lg bg-[#8e72fd] w-[200px] h-[50px] md:mx-[45%] mx-[20%]'>More Publication</button>       
         </div>
         
     )

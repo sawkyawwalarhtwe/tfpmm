@@ -16,7 +16,7 @@ export default function HomePage() {
      <SlideShow/>
       <hr className='mx-[6%]'/> 
       <MAbout/>
-      <MVideos/>
+      {/* <MVideos/> */}
       <hr className='mx-[6%]'/>
       <MainNews/>
       <MEvents/>
